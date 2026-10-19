@@ -1,0 +1,114 @@
+.accordion {
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  border-bottom: 1px solid var(--line);
+}
+
+.heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+  color: inherit;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  width: 100%;
+  padding: 1.35rem 0;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 0.98rem + 0.42vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--forest);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.trigger:hover {
+  color: var(--terracotta-strong);
+}
+
+.item[data-open='true'] .trigger {
+  color: var(--terracotta-strong);
+}
+
+.question {
+  flex: 1;
+}
+
+.indicator {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--forest);
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+.item[data-open='true'] .indicator {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--cream);
+}
+
+.plusIcon {
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.item[data-open='true'] .plusIcon {
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur-slow) var(--ease-out);
+}
+
+.panel[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+
+.panelInner {
+  overflow: hidden;
+}
+
+.answer {
+  max-width: 64ch;
+  padding-bottom: 0.35rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+.link {
+  display: inline-block;
+  margin: 0.9rem 0 1.5rem;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.link:hover {
+  color: var(--terracotta-strong);
+  border-color: var(--terracotta-strong);
+}

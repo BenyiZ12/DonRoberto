@@ -1,0 +1,71 @@
+.block {
+  width: 100%;
+}
+
+.terracotta {
+  --btn-bg: var(--terracotta-strong);
+  --btn-border: var(--terracotta-strong);
+  --btn-fg: var(--white);
+}
+
+.terracotta:hover {
+  --btn-bg: #8c4c33;
+  --btn-border: #8c4c33;
+  color: var(--white);
+}
+
+.outline {
+  --btn-bg: transparent;
+  --btn-fg: var(--forest);
+  --btn-border: var(--line-strong);
+}
+
+.outline:hover {
+  --btn-bg: transparent;
+  --btn-fg: var(--forest-deep);
+  --btn-border: var(--forest);
+  color: var(--forest-deep);
+}
+
+.light {
+  --btn-bg: var(--cream);
+  --btn-fg: var(--forest-deep);
+  --btn-border: var(--cream);
+}
+
+.light:hover {
+  --btn-bg: var(--white);
+  --btn-border: var(--white);
+  color: var(--forest-deep);
+}
+
+.ghostLight {
+  --btn-bg: transparent;
+  --btn-fg: var(--cream);
+  --btn-border: var(--line-invert-strong);
+}
+
+.ghostLight:hover {
+  --btn-bg: rgba(247, 243, 234, 0.1);
+  --btn-fg: var(--cream);
+  --btn-border: var(--cream);
+  color: var(--cream);
+}
+
+.sm {
+  padding: 0.6em 1.15em;
+  min-height: 2.5rem;
+  font-size: var(--fs-xs);
+}
+
+.md {
+  padding: 0.85em 1.7em;
+  min-height: 3rem;
+  font-size: var(--fs-sm);
+}
+
+.lg {
+  padding: 1em 2em;
+  min-height: 3.5rem;
+  font-size: var(--fs-body);
+}

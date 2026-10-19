@@ -1,0 +1,69 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--forest);
+  background-image: radial-gradient(
+    110% 100% at 85% 10%,
+    rgba(52, 80, 67, 0.8) 0%,
+    rgba(36, 61, 50, 0) 60%
+  );
+  color: var(--cream);
+  padding-block: calc(var(--header-h) + clamp(2.75rem, 2rem + 4vw, 5rem)) clamp(2.5rem, 2rem + 3vw, 4rem);
+}
+
+.deco {
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  width: 15rem;
+  height: 18rem;
+  transform: translateY(-50%);
+  color: var(--gold-light);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 48rem) {
+  .deco {
+    opacity: 0.22;
+    right: -4rem;
+  }
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 48rem;
+}
+
+.eyebrow {
+  color: var(--gold-light);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--cream);
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  line-height: 1.72;
+  color: rgba(247, 243, 234, 0.82);
+  max-width: 46rem;
+}
+
+.extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+  margin-top: var(--space-sm);
+}

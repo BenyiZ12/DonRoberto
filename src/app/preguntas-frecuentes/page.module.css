@@ -1,0 +1,46 @@
+.layout {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 64rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    gap: var(--space-2xl);
+  }
+}
+
+.aside {
+  display: flex;
+}
+
+@media (min-width: 64rem) {
+  .aside {
+    position: sticky;
+    top: calc(var(--header-h) + 1.5rem);
+  }
+}
+
+.asideCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: var(--space-lg);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--terracotta);
+  border-radius: var(--radius-md);
+  background: var(--white);
+}
+
+.asideTitle {
+  margin: 0;
+  font-size: var(--fs-h4);
+}
+
+.asideText {
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  color: var(--ink-soft);
+}

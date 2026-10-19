@@ -1,0 +1,29 @@
+# dependencias
+node_modules/
+
+# builds
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+# entorno
+.env
+.env.local
+.env*.local
+
+# sistema operativo / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# logs
+npm-debug.log*
+yarn-error.log*
+
+# carpetas temporales de las herramientas de auditoría (Chrome headless)
+.chrome-audit/
+.chrome-test/
+.chrome-shot/
+shots/

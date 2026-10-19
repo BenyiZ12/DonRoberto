@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 70svh;
+  padding-block: calc(var(--header-h) + 4rem) 5rem;
+  background: var(--surface-alt);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  max-width: 44rem;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--fs-h1);
+  line-height: 1.08;
+}
+
+.text {
+  font-size: var(--fs-lead);
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 52ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--line);
+}
+
+.links a {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.links a:hover {
+  color: var(--terracotta-strong);
+  border-color: var(--terracotta-strong);
+}

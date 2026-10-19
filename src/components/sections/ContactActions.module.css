@@ -1,0 +1,9 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.actions[data-tone='dark'] {
+  --btn-fg: var(--cream);
+}

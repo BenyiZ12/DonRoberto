@@ -1,0 +1,162 @@
+.gallery {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 62rem) {
+  .gallery {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+    gap: var(--space-lg);
+    align-items: stretch;
+  }
+}
+
+.mainPhoto {
+  width: 100%;
+  height: 100%;
+}
+
+.sideColumn {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-rows: auto 1fr;
+}
+
+.sidePhoto {
+  width: 100%;
+}
+
+.callout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  background: var(--forest);
+  color: var(--cream);
+}
+
+.callout svg {
+  color: var(--gold-light);
+  margin-bottom: 0.35rem;
+}
+
+.calloutTitle {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.calloutText {
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: rgba(247, 243, 234, 0.78);
+}
+
+/* --- Menú --- */
+
+.menuPending {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 62rem) {
+  .menuPending {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: var(--space-2xl);
+  }
+}
+
+.menuPendingText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.menuPendingTitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.menuPendingBody {
+  font-size: var(--fs-sm);
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 52ch;
+}
+
+.menuPendingList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-lg);
+}
+
+.menuPendingList li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-sm);
+  font-weight: 550;
+  color: var(--forest);
+}
+
+.menuPendingList svg {
+  color: var(--terracotta-strong);
+}
+
+.menuPendingActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.menuPendingAside {
+  display: flex;
+}
+
+.hoursCard {
+  width: 100%;
+  padding: var(--space-lg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+}
+
+.hoursCardTitle {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 650;
+  letter-spacing: 0;
+  color: var(--forest);
+}
+
+.hoursNote {
+  margin-top: var(--space-md);
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+/* --- Horarios y ubicación --- */
+
+.hoursLayout {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 62rem) {
+  .hoursLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-2xl);
+  }
+}
+
+.hoursActions {
+  margin-top: var(--space-lg);
+}

@@ -1,0 +1,153 @@
+.channels {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 52rem) {
+  .channels {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+}
+
+.channel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: var(--space-lg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+}
+
+.channel:hover {
+  border-color: var(--terracotta);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.channelIcon {
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--terracotta-strong);
+  margin-bottom: 0.2rem;
+}
+
+.channelTitle {
+  margin: 0;
+  font-size: var(--fs-h4);
+}
+
+.channelText {
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-sm);
+}
+
+/* --- Datos del negocio --- */
+
+.dataLayout {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 62rem) {
+  .dataLayout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: var(--space-2xl);
+  }
+}
+
+.definitions {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.definition {
+  display: grid;
+  gap: 0.35rem;
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--line);
+}
+
+@media (min-width: 40rem) {
+  .definition {
+    grid-template-columns: 10rem minmax(0, 1fr);
+    gap: var(--space-md);
+    align-items: start;
+  }
+}
+
+.definitionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.definitionLabel svg {
+  color: var(--terracotta-strong);
+}
+
+.definitionValue {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  color: var(--charcoal);
+}
+
+.definitionValue a {
+  color: var(--forest);
+  font-weight: 550;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 1px;
+}
+
+.definitionValue a:hover {
+  color: var(--terracotta-strong);
+  border-color: var(--terracotta-strong);
+}
+
+.aside {
+  display: flex;
+}
+
+.asideCard {
+  padding: var(--space-lg);
+  border-left: 3px solid var(--terracotta);
+  background: var(--white);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.asideTitle {
+  margin: 0 0 0.6rem;
+  font-size: var(--fs-h4);
+}
+
+.asideText {
+  font-size: var(--fs-sm);
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+.asideText + .asideText {
+  margin-top: 0.8rem;
+}

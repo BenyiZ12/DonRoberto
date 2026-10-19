@@ -1,0 +1,46 @@
+.float {
+  position: fixed;
+  right: clamp(1rem, 0.5rem + 2vw, 1.75rem);
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: var(--forest);
+  color: var(--cream);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-float);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.75rem) scale(0.96);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out),
+    visibility var(--dur-base),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.float[data-visible='true'] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.float:hover {
+  background: var(--forest-deep);
+  color: var(--cream);
+}
+
+.label {
+  display: none;
+}
+
+@media (min-width: 36rem) {
+  .label {
+    display: inline;
+  }
+}

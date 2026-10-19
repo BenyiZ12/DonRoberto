@@ -1,0 +1,127 @@
+.menu {
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 62rem) {
+  .menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2xl) var(--space-xl);
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.categoryHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.categoryTitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.categoryDescription {
+  font-size: var(--fs-sm);
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--line);
+}
+
+.itemMain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.itemName {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--forest);
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.soldOut {
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  padding: 0.1em 0.6em;
+}
+
+.item[data-available='false'] .itemName {
+  color: var(--ink-muted);
+}
+
+.itemDescription {
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 48ch;
+}
+
+.itemNote {
+  font-size: var(--fs-xs);
+  color: var(--ink-muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.tag {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--terracotta-strong);
+  border: 1px solid color-mix(in srgb, var(--terracotta-strong) 30%, transparent);
+  border-radius: var(--radius-pill);
+  padding: 0.15em 0.6em;
+}
+
+.itemPrice {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--forest);
+  white-space: nowrap;
+}
+
+.itemPrice:only-child {
+  align-self: center;
+}

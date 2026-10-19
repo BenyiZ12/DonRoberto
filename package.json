@@ -1,0 +1,37 @@
+{
+  "name": "don-roberto-hotel-cafeteria",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web de Don Roberto - Hotel y Cafetería (San Isidro de El General, Pérez Zeledón, Costa Rica)",
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "node scripts/generate-og.mjs",
+    "build": "next build",
+    "postbuild": "node scripts/fix-rsc-payloads.mjs",
+    "start": "next start",
+    "serve": "node scripts/serve.mjs",
+    "lint": "eslint src scripts --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "audit": "node scripts/audit.mjs",
+    "audit:shots": "node scripts/audit.mjs --shots",
+    "test:ui": "node scripts/test-interactions.mjs",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "lucide-react": "^1.59.0",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^10.13.0",
+    "eslint-config-next": "16.4.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

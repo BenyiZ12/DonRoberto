@@ -1,0 +1,155 @@
+.room {
+  display: grid;
+  gap: var(--space-lg);
+  padding-block: var(--space-xl);
+  border-top: 1px solid var(--line);
+}
+
+@media (min-width: 62rem) {
+  .room {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .room[data-reversed='true'] .media {
+    order: 2;
+  }
+}
+
+.media {
+  min-width: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.name {
+  margin: 0;
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: var(--fs-sm);
+  font-weight: 550;
+  color: var(--terracotta-strong);
+}
+
+.description {
+  font-size: var(--fs-sm);
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 52ch;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding-block: var(--space-md);
+  border-block: 1px solid var(--line);
+}
+
+.spec {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: var(--space-sm);
+  align-items: baseline;
+}
+
+@media (max-width: 32rem) {
+  .spec {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+
+.specLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.specLabel svg {
+  color: var(--terracotta-strong);
+}
+
+.specValue {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--charcoal);
+}
+
+.priceRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.priceUnit {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.pricePending {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.priceNote {
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+.conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.conditions li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.conditions li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.4rem;
+  height: 1px;
+  background: var(--terracotta-strong);
+}

@@ -1,0 +1,34 @@
+.layout {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 64rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 16rem;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.asideLabel {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  max-width: 22ch;
+}
+
+@media (min-width: 64rem) {
+  .aside {
+    position: sticky;
+    top: calc(var(--header-h) + 1.5rem);
+    justify-content: flex-start;
+    padding-top: 1.5rem;
+  }
+}
